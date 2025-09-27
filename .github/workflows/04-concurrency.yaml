@@ -1,0 +1,12 @@
+name: Concurrency
+on: [push] 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+jobs:    
+  Concurrency:
+    runs-on: ubuntu-latest    
+    steps:
+      - name: step-1
+        run: echo "Hello World"
+      - name: step-2
+        run: sleep 20
