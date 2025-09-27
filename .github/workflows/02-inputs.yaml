@@ -1,0 +1,38 @@
+name: Inputs-to-workflow
+on: 
+  workflow-dispatch:   # manual triggers
+    inputs:
+      logLevel:
+        description: 'Log Level'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+          - info
+          - warning
+          - debug
+      print-tags:
+        description: 'True to print to STDOUT'
+        required: true
+        type: boolean
+      tags:
+        description: 'Test Scenario tags'
+        required: true
+        type: string
+      environment:
+        description:
+        type: environment
+        required: false
+
+jobs:    
+  Print-inputs:
+    runs-on: ubuntu-latest  
+    steps:
+      - name: print the input tag to STDOUT
+        run: echo The tags are ${{ inputs.tags }}
+      - name: print the environment
+        run: echo The tags are ${{ inputs.environment }}
+      - name: print the print tags
+        run: echo The tags are ${{ inputs.print-tags }}     
+      - name: print the logLevel
+        run: echo The tags are ${{ inputs.logLevel }} 
