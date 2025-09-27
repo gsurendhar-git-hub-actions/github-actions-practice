@@ -34,5 +34,5 @@ jobs:
         run: echo The tags are ${{ inputs.environment }}
       - name: print the print tags
         run: echo The tags are ${{ inputs.print-tags }}     
-      - name: print the logLevel
-        run: echo The tags are ${{ inputs.logLevel }} 
+      # - name: print the logLevel
+      #   run: echo The tags are ${{ inputs.logLevel }} 
