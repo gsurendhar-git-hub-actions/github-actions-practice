@@ -2,6 +2,7 @@ name: Concurrency
 on: [push] 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 jobs:    
   Concurrency:
     runs-on: ubuntu-latest    
