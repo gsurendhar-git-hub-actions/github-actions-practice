@@ -1,4 +1,4 @@
-name: Inputs-to-workflow
+name: Inputs to workflow
 on: 
   workflow-dispatch:   # manual triggers
     inputs:
@@ -30,9 +30,9 @@ jobs:
     steps:
       - name: print the input tag to STDOUT
         run: echo The tags are ${{ inputs.tags }}
-      # - name: print the environment
-      # #   run: echo The tags are ${{ inputs.environment }}
-      # # - name: print the print tags
-      #   run: echo The tags are ${{ inputs.print-tags }}     
-      # # - name: print the logLevel
-      # #   run: echo The tags are ${{ inputs.logLevel }} 
+      - name: print the environment
+        run: echo The tags are ${{ inputs.environment }}
+      - name: print the print tags
+        run: echo The tags are ${{ inputs.print-tags }}     
+      - name: print the logLevel
+        run: echo The tags are ${{ inputs.logLevel }} 
