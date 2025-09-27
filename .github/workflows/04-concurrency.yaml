@@ -7,6 +7,6 @@ jobs:
     runs-on: ubuntu-latest    
     steps:
       - name: step-1
-        run: echo "Hello World "
+        run: echo "Hello World, Hi "
       - name: step-2
         run: sleep 20
