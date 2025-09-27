@@ -1,4 +1,4 @@
-name: Parallel
+name: Squenctial-Parallel
 on: [push]
 jobs:
   job-1:
