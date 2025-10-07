@@ -1,0 +1,11 @@
+name: self hosted runner
+on: [push]
+jobs:
+  build:
+    runs-on: self-hosted #this tag id mentioned in our ec2 instance while setup github action runner
+    steps:
+    # code checkout will happened
+      - name: checkout
+        uses: actions/checkout@v5
+      - name: step2
+        run: echo "Hello, self-hosted runner"
